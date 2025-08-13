@@ -3,15 +3,17 @@ import { AboutJourneySection } from "@/components/about-journey-section"
 import { MissionVisionSection } from "@/components/mission-vision-section"
 import { PeopleFirstSection } from "@/components/people-first-section"
 import { MeetTeamSection } from "@/components/meet-team-section"
+import { Footer } from "@/components/footer"
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-background via-primary/10 to-background dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
       <Navigation />
       <AboutJourneySection />
       <MissionVisionSection />
       <PeopleFirstSection />
       <MeetTeamSection />
+      <Footer />
     </main>
   )
 }

@@ -28,11 +28,11 @@ export function MissionVisionSection() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl card-gradient hover:glow-effect transition-all duration-500 transform hover:scale-105"
+              className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:bg-card/70 transition-all duration-500 transform hover:scale-105"
             >
               <div className="text-left">
-                <h3 className="text-2xl font-bold text-white mb-6 font-heading">{card.title}</h3>
-                <p className="text-gray-300 leading-relaxed mb-8 min-h-[100px]">{card.description}</p>
+                <h3 className="text-2xl font-bold text-foreground mb-6 font-heading">{card.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-8 min-h-[100px]">{card.description}</p>
                 <Button className="w-full rounded-full py-3 text-sm font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 transition-all duration-300 transform hover:scale-105">
                   {card.buttonText}
                   <svg

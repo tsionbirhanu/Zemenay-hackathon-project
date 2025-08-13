@@ -5,7 +5,6 @@ export function ServicesGridSection() {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white font-heading mb-6">Comprehensive Technology Solutions</h2>
           <p className="text-xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
@@ -14,14 +13,12 @@ export function ServicesGridSection() {
           </p>
         </div>
 
-        {/* Services Container */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 rounded-3xl blur-xl" />
           <div className="relative bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-purple-500/20">
             <h3 className="text-3xl font-bold text-white text-center mb-12 font-heading">OUR SERVICES</h3>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Full Stack Web Development */}
               <div className="group p-8 rounded-2xl card-gradient hover:glow-effect transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
@@ -42,7 +39,6 @@ export function ServicesGridSection() {
                 </div>
               </div>
 
-              {/* SEO Management */}
               <div className="group p-8 rounded-2xl card-gradient hover:glow-effect transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
@@ -62,8 +58,6 @@ export function ServicesGridSection() {
                   </div>
                 </div>
               </div>
-
-              {/* WordPress Development */}
               <div className="group p-8 rounded-2xl card-gradient hover:glow-effect transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
@@ -85,8 +79,6 @@ export function ServicesGridSection() {
                   </div>
                 </div>
               </div>
-
-              {/* Website Maintenance */}
               <div className="group p-8 rounded-2xl card-gradient hover:glow-effect transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0">
