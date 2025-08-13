@@ -65,7 +65,7 @@ export function WhyZemenaySection() {
             Why Zemenay?
           </h2>
           <p className="text-lg text-foreground/80 dark:text-muted-foreground max-w-3xl mx-auto">
-            We don't just build websites, we build digital experiences that drive
+            We don&apos;t just build websites, we build digital experiences that drive
             growth and inspire loyalty.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ function FeatureCard({
   title,
   description,
   icon: Icon,
-  index,
+  // index,
 }: Feature & { index: number }) {
   const cardRef = React.useRef<HTMLDivElement>(null);
 

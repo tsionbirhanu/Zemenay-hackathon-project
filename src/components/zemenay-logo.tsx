@@ -1,7 +1,14 @@
+import Image from "next/image";
+
 export function ZemenayLogo() {
   return (
     <div className="w-24 h-24">
-      <img src="/images/image.png" alt="Zemenay Logo" className="w-full h-full object-contain" />
+      <Image
+        src="/images/image.png"
+        alt="Zemenay Logo"
+        fill 
+        className="object-contain"
+      />
     </div>
-  )
+  );
 }
