@@ -13,6 +13,20 @@
   Your browser does not support the video tag.
 </video>
 
+
+The video is in the public folder by the name Zemenay - Revolutionize Your Digital Experience - Google Chrome 2025-08-13 19-52-25.mp4
+
+here is some demo pictures 
+<img width="1365" height="2567" alt="image" src="https://github.com/user-attachments/assets/a41e3934-ad99-49c3-948d-feee5971c052" />
+<img width="1365" height="2567" alt="image" src="https://github.com/user-attachments/assets/ad407ae7-5798-4c04-a702-8212094b8f2a" />
+<img width="1365" height="2567" alt="image" src="https://github.com/user-attachments/assets/2f99bb9c-fed3-45b0-8fe3-6336833e0080" />
+<img width="1356" height="2826" alt="image" src="https://github.com/user-attachments/assets/d6bead1a-2ed1-4962-9b50-74f7a04b1c73" />
+<img width="1343" height="3240" alt="image" src="https://github.com/user-attachments/assets/9b41db19-c87e-4f1d-8330-353f37ad636c" />
+<img width="1350" height="1511" alt="image" src="https://github.com/user-attachments/assets/b13ea839-657b-4c29-9b7f-a6cceaf95e6c" />
+<img width="1346" height="1501" alt="image" src="https://github.com/user-attachments/assets/6812458b-427b-473e-b78a-d5aa3538c1d7" />
+
+
+
 ---
 
 ## ✨ Features
