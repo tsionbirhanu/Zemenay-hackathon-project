@@ -1,13 +1,40 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Moon, Menu, X } from "lucide-react"
+import { Moon, Sun, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme")
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+
+    if (savedTheme === "light" || (!savedTheme && !prefersDark)) {
+      setIsDarkMode(false)
+      document.documentElement.classList.remove("dark")
+    } else {
+      setIsDarkMode(true)
+      document.documentElement.classList.add("dark")
+    }
+  }, [])
+
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode
+    setIsDarkMode(newMode)
+
+    if (newMode) {
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light")
+    }
+  }
 
   const navLinks = [
     { href: "/", label: "HOME" },
@@ -17,52 +44,54 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-from via-purple-900  backdrop-blur-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.svg" alt="Zemenay" width={40} height={40} className="w-10 h-10" />
-            <span className="text-white font-bold tracking-wide ml-2">ZEMENAY</span>
+          <Link href="/" className="flex items-center group">
+            <Image
+              src="/logo.svg"
+              alt="Zemenay"
+              width={40}
+              height={40}
+              className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
+            />
+            <span className="text-white font-bold tracking-wide ml-2 text-xl">ZEMENAY</span>
           </Link>
-
-          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-4">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <Button
                   variant="outline"
-                  className="rounded-full px-6 py-2 text-sm font-medium bg-blue-800 hover:bg-blue-700 border-blue-900 text-white transition-all duration-300"
+                  className="rounded-full px-6 py-2 text-sm font-medium bg-blue-600/80 hover:bg-blue-500 border-blue-500/50 text-white transition-all duration-300 backdrop-blur-sm"
                 >
                   {link.label}
                 </Button>
               </Link>
             ))}
-
-            {/* Dark mode toggle */}
             <Button
               variant="ghost"
               size="icon"
-              className="rounded-full w-10 h-10 text-white hover:bg-blue-700 transition-all duration-300"
+              onClick={toggleDarkMode}
+              className="rounded-full w-10 h-10 text-white hover:bg-white/10 transition-all duration-300"
+              aria-label="Toggle dark mode"
             >
-              <Moon className="h-5 w-5" />
+              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="rounded-full w-10 h-10 text-white hover:bg-blue-700 transition-all duration-300"
+              className="rounded-full w-10 h-10 text-white hover:bg-white/10 transition-all duration-300"
+              aria-label="Toggle menu"
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 p-6 rounded-2xl bg-black/80 backdrop-blur-sm border border-white/10">
             <div className="flex flex-col gap-4">
@@ -70,7 +99,7 @@ export function Navigation() {
                 <Link key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)}>
                   <Button
                     variant="ghost"
-                    className="w-full justify-start text-white hover:bg-blue-700 transition-all duration-300"
+                    className="w-full justify-start text-white hover:bg-white/10 transition-all duration-300"
                   >
                     {link.label}
                   </Button>
@@ -79,11 +108,11 @@ export function Navigation() {
               <div className="border-t border-white/10 pt-4">
                 <Button
                   variant="ghost"
-                  size="icon"
-                  className="w-full justify-start text-white hover:bg-blue-700 transition-all duration-300"
+                  onClick={toggleDarkMode}
+                  className="w-full justify-start text-white hover:bg-white/10 transition-all duration-300"
                 >
-                  <Moon className="h-5 w-5 mr-2" />
-                  Dark Mode
+                  {isDarkMode ? <Sun className="h-5 w-5 mr-2" /> : <Moon className="h-5 w-5 mr-2" />}
+                  {isDarkMode ? "Light Mode" : "Dark Mode"}
                 </Button>
               </div>
             </div>
