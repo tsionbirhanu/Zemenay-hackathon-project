@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Zemenay Website
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.4.6-black?style=for-the-badge&logo=next.js) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-green?style=for-the-badge&logo=tailwind-css) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-v12.23.12-purple?style=for-the-badge) ![TypeScript](https://img.shields.io/badge/TypeScript-v5-blue?style=for-the-badge&logo=typescript)
 
-First, run the development server:
+A **modern, responsive, and interactive frontend** built with **Next.js**, **Tailwind CSS**, and **Framer Motion** to deliver smooth animations and a polished UI/UX experience.
+
+---
+
+## ✨ Features
+
+- ✅ Fully responsive layouts  
+- ✅ Smooth animations with **Framer Motion**  
+- ✅ Modular and reusable components  
+- ✅ Modern Tailwind CSS utilities  
+- ✅ TypeScript support for type safety  
+- ✅ Accessibility best practices
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js** – React framework for production  
+- **React** – Frontend library  
+- **TailwindCSS** – Utility-first CSS  
+- **Framer Motion** – Animations & gestures  
+- **Lucide React** – Beautiful icons  
+- **clsx & tailwind-merge** – Dynamic class merging  
+- **TypeScript** – Type-safe development  
+
+---
+
+## ⚡ Installation
+
+Clone the repository:
 
 ```bash
+git clone https://github.com/yourusername/zemenay-frontend.git
+cd zemenay-frontend
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+# or
+yarn install
+Run the development server:
+
+bash
+Copy
+Edit
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Open http://localhost:3000 to view your project in the browser.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎨 Animations with Framer Motion
+Framer Motion powers smooth interactive animations:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Fork the repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a feature branch (git checkout -b feature/YourFeature)
 
-## Learn More
+Commit your changes (git commit -m 'Add some feature')
 
-To learn more about Next.js, take a look at the following resources:
+Push to the branch (git push origin feature/YourFeature)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📄 License
+This project is MIT Licensed.
