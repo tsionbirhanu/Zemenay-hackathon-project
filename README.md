@@ -9,7 +9,7 @@
 ## Demo Video
 
 <video width="600" controls>
-  <source src="public/Zemenay.mp4" type="video/mp4">
+  <source src="public/Zemenay - Revolutionize Your Digital Experience - Google Chrome 2025-08-13 19-52-25.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
