@@ -1,13 +1,13 @@
 export function ServicesHeroSection() {
   return (
-    <section className="pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h1 className="text-6xl font-bold text-white font-heading mb-8">Our Expertise, Your Solutions.</h1>
-        <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+        <section className="pt-24 pb-16 md:pt-32 md:pb-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-purple-900 dark:text-white font-heading mb-8">Our Expertise, Your Solutions.</h1>
+                <p className="text-lg md:text-xl text-blue-950 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
           Innovative software, web development, AI, and more to help your business thrive.
         </p>
         <div className="inline-block">
-          <h2 className="text-2xl font-semibold text-purple-400 mb-4">Explore Our Services</h2>
+                    <h2 className="text-xl md:text-2xl font-semibold text-purple-600 dark:text-purple-400 mb-4">Explore Our Services</h2>
         </div>
       </div>
     </section>

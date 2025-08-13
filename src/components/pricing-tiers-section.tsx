@@ -46,13 +46,13 @@ export function PricingTiersSection() {
   ]
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+        <section className="py-16 md:py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-3 gap-8">
           {pricingTiers.map((tier, index) => (
             <div
               key={index}
-              className={`relative group p-8 rounded-3xl transition-all duration-500 transform hover:scale-105 ${
+                            className={`relative group p-6 md:p-8 rounded-3xl transition-all duration-500 transform hover:scale-105 ${
                 tier.popular
                   ? "bg-gradient-to-b from-purple-900/60 to-blue-900/60 border-2 border-purple-500/50 glow-effect"
                   : "card-gradient hover:glow-effect"
@@ -67,13 +67,13 @@ export function PricingTiersSection() {
               )}
 
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-2 font-heading">{tier.name}</h3>
-                <p className="text-gray-300 text-sm mb-8">{tier.subtitle}</p>
+                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 font-heading">{tier.name}</h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-8">{tier.subtitle}</p>
 
                 <div className="mb-8">
-                  <div className="text-4xl font-bold text-white font-heading">{tier.price}</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white font-heading">{tier.price}</div>
                   {tier.name === "WordPress Solution" && (
-                    <div className="text-gray-400 text-sm mt-2">Based on project requirements</div>
+                    <div className="text-gray-600 dark:text-gray-400 text-sm mt-2">Based on project requirements</div>
                   )}
                 </div>
 
@@ -85,17 +85,13 @@ export function PricingTiersSection() {
                           <Check className="w-3 h-3 text-white" />
                         </div>
                       </div>
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
 
                 <Button
-                  className={`w-full rounded-full py-3 text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    tier.buttonVariant === "default"
-                      ? "bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0"
-                      : "bg-transparent border-2 border-purple-500/50 hover:border-purple-400 text-white hover:bg-purple-500/10"
-                  }`}
+                  className={`w-full rounded-full py-3 text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${tier.buttonVariant === 'default' ? 'bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0' : 'bg-white dark:bg-transparent border-2 border-purple-500 dark:border-purple-500/50 hover:border-purple-400 text-purple-800 dark:text-white hover:bg-purple-100 dark:hover:bg-purple-500/10'}`}
                 >
                   {tier.buttonText}
                 </Button>

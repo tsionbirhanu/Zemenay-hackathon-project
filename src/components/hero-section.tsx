@@ -1,35 +1,63 @@
 
 "use client"
 
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { NetworkVisualization } from "./network-visualization"
 
 export function HeroSection() {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
-      <NetworkVisualization />
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3, delayChildren: 0.2 },
+    },
+  }
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-20">
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+  }
+  return (
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 animate-float-slow">
+        <NetworkVisualization />
+      </div>
+
+            <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="relative z-10 max-w-7xl mx-auto px-6 mt-20"
+      >
         <div className="text-center mb-16">
-          <h1 className="text-6xl md:text-7xl font-bold text-white font-heading mb-8 leading-tight">
+                    <motion.h1
+            variants={itemVariants}
+            className="text-6xl md:text-7xl font-bold font-heading mb-8 leading-tight text-foreground dark:text-white"
+          >
             Revolutionize Your
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-purple-400">
               Digital Experience
             </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12">
-            At Zemenay, we build clean, scalable, and elegant digital experiences for forward-thinking businesses.
-          </p>
-
-          <Button
-            size="lg"
-            className="group relative rounded-full px-12 py-6 text-lg font-semibold bg-blue-800 hover:from-purple-700 hover:to-blue-700 text-white border-0 shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-105 animate-pulse-glow "
+          </motion.h1>
+                    <motion.p
+            variants={itemVariants}
+            className="text-xl text-slate-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-12"
           >
-            <span className="relative z-10">lets build together</span>
-          </Button>
+            At Zemenay, we build clean, scalable, and elegant digital experiences for forward-thinking businesses.
+          </motion.p>
+
+                    <motion.div variants={itemVariants}>
+            <Button
+              size="lg"
+              className="group relative rounded-full px-12 py-6 text-lg font-semibold light-card-gradient text-white border-0 shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-105 animate-pulse-glow"
+            >
+              <span className="relative z-10">Lets build together</span>
+            </Button>
+                    </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

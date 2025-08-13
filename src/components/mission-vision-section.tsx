@@ -22,17 +22,17 @@ export function MissionVisionSection() {
   ]
 
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+        <section className="py-16 md:py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-3 gap-8">
           {cards.map((card, index) => (
-            <div
+                        <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:bg-card/70 transition-all duration-500 transform hover:scale-105"
+              className="group relative p-6 md:p-8 rounded-2xl bg-card/50 backdrop-blur-sm border border-border hover:bg-card/70 transition-all duration-500 transform hover:scale-105"
             >
               <div className="text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6 font-heading">{card.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-8 min-h-[100px]">{card.description}</p>
+                                <h3 className="text-xl md:text-2xl font-bold text-purple-900 dark:text-white mb-6 font-heading">{card.title}</h3>
+                                <p className="text-blue-950 dark:text-gray-300 leading-relaxed mb-8">{card.description}</p>
                 <Button className="w-full rounded-full py-3 text-sm font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 transition-all duration-300 transform hover:scale-105">
                   {card.buttonText}
                   <svg

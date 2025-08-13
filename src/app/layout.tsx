@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Space_Grotesk } from "next/font/google"
 import "./globals.css"
+import { cn } from "@/lib/utils"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,8 +28,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} antialiased dark`}>
-      <body className="font-sans bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+      <body
+        className={cn(
+          'font-sans antialiased',
+          inter.variable,
+          spaceGrotesk.variable,
+          'bg-[#E6F0F9] dark:bg-gradient-to-br dark:from-gray-900 dark:to-purple-950 min-h-screen'
+        )}
+      >
         {children}
       </body>
     </html>
