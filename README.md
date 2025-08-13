@@ -1,5 +1,5 @@
 # 🚀 Zemenay Website
-
+## our website link  https://zemenay-hackathon-project.vercel.app/
 ![Next.js](https://img.shields.io/badge/Next.js-15.4.6-black?style=for-the-badge&logo=next.js) ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-green?style=for-the-badge&logo=tailwind-css) ![TypeScript](https://img.shields.io/badge/TypeScript-v5-blue?style=for-the-badge&logo=typescript) ![Framer Motion](https://img.shields.io/badge/Framer_Motion-v12.23.12-purple?style=for-the-badge)
 
 > A **modern, responsive, and interactive frontend** built with **Next.js**, **Tailwind CSS**, **Shadcn/UI**, and **Framer Motion**. Features sleek dual-theme support, orbital logo animations, glassmorphism, and smooth micro-interactions for a polished UI/UX experience.
