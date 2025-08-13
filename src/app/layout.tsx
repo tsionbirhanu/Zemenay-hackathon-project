@@ -7,14 +7,14 @@ import { cn } from "@/lib/utils";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  preload: false, // ✅ prevent build-time fetch
+  preload: false, 
   variable: "--font-inter",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
-  preload: false, // ✅ prevent build-time fetch
+  preload: false, 
   variable: "--font-space-grotesk",
 });
 
