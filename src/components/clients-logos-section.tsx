@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 const clients = [
   { name: "Chewata Awaki", logo: "/ch1.svg" },
   { name: "Hiyaw", logo: "/ch2.svg" },
@@ -27,11 +29,14 @@ export function ClientsLogosSection() {
 
         <div className="relative flex items-center justify-center h-96 animate-fade-up" style={{ animationDelay: '300ms' }}>
           <div className="absolute flex items-center justify-center w-40 h-40 rounded-full bg-background/50 dark:bg-gradient-to-r dark:from-blue-500/20 dark:to-purple-500/20 backdrop-blur-sm border border-border dark:border-white/10 z-20">
-            <img
+            <Image
               src="/logo.svg"
               alt="Zemenay Logo"
-              className="w-32 h-32 object-contain"
+              width={128}
+              height={128}
+              className="object-contain"
               draggable={false}
+              priority
             />
           </div>
 
@@ -40,12 +45,12 @@ export function ClientsLogosSection() {
             <div className="absolute w-[28rem] h-[28rem] rounded-full border border-secondary/20 dark:border-purple-500/10 animate-spin-reverse" />
           </div>
 
-          {clients.map((client, index) => {
+          {clients.map((client, i) => {
             const animationDuration = 20
 
             return (
               <div
-                key={index}
+                key={client.name}
                 className="absolute top-1/2 left-1/2"
                 style={{
                   width: radius * 2,
@@ -54,8 +59,8 @@ export function ClientsLogosSection() {
                   marginTop: -radius,
                   animation: `orbit-spin ${animationDuration}s linear infinite`,
                   transformOrigin: "50% 50%",
-                  animationDelay: `-${(animationDuration / clients.length) * index}s`,
-                  transform: `rotate(${(360 / clients.length) * index}deg)`,
+                  animationDelay: `-${(animationDuration / clients.length) * i}s`,
+                  transform: `rotate(${(360 / clients.length) * i}deg)`,
                 }}
               >
                 <div
@@ -69,10 +74,12 @@ export function ClientsLogosSection() {
                 >
                   <div className="group relative">
                     <div className="w-20 h-20 rounded-full bg-background/30 dark:bg-white/10 backdrop-blur-sm border border-border dark:border-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-background/50 dark:hover:bg-white/20">
-                      <img
+                      <Image
                         src={client.logo || "/placeholder.svg"}
                         alt={client.name}
-                        className="w-14 h-14 object-contain transition-all duration-300"
+                        width={56}
+                        height={56}
+                        className="object-contain transition-all duration-300"
                         draggable={false}
                       />
                     </div>
