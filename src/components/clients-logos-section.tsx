@@ -13,14 +13,14 @@ const radius = 180
 
 export function ClientsLogosSection() {
   return (
-            <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
-                              <h2 className="text-4xl font-bold font-heading mb-6 text-foreground dark:text-white">
-            Clients We've Had the Pleasure to Work With
+          <h2 className="text-4xl font-bold font-heading mb-6 text-foreground dark:text-white">
+            Clients We&apos;ve Had the Pleasure to Work With
           </h2>
           <p className="text-xl text-foreground/80 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We're proud to have collaborated with these industry leaders, helping them achieve their digital
+            We&apos;re proud to have collaborated with these industry leaders, helping them achieve their digital
             transformation goals.
           </p>
         </div>
