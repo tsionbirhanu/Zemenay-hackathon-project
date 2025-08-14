@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Zemenay - Revolutionize Your Digital Experience",
   description:
     "At Zemenay, we build clean, scalable, and elegant digital experiences for forward-thinking businesses.",
-  generator: "v0.dev",
+  generator: "next js",
 };
 
 export default function RootLayout({

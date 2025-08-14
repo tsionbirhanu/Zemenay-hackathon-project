@@ -96,7 +96,6 @@ function FeatureCard({
   title,
   description,
   icon: Icon,
-  // index,
 }: Feature & { index: number }) {
   const cardRef = React.useRef<HTMLDivElement>(null);
 
